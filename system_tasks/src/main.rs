@@ -8,20 +8,13 @@ struct Task {
 
 impl Task {
     fn add_task(tasks : &mut Vec<Task>,name : String,  description : String) {
-        
-        match Self::find_task(&name.trim().to_string(), tasks) {
-
-            Some(task) => println!("\nLa Tarea {} ya existe!!\n",task.name),
-            None => {
-                let task = Task {
+             let task = Task {
                 name : name.trim().to_string(),
                 description : description.trim().to_string(),
                 completed : false,
-                };
-                tasks.push(task);
-                println!("\nTarea Agregada!!|\n");
-            },
-        }
+            };
+            tasks.push(task);
+            println!("\nTarea Agregada!!|\n");
     }
 
     fn list_tasks(tasks : & Vec<Task>) {
@@ -75,14 +68,19 @@ fn main() {
             "1" => Task::list_tasks(& tasks),
             "2" => {
                 let mut name = String::new();
-                let mut description = String::new();
-
                 println!("\nIngrese el nombre de la Tarea: ");
                 io::stdin().read_line(&mut name).unwrap();
-                println!("Ingrese la descripcion de la Tarea: ");
-                io::stdin().read_line(&mut description).unwrap();
 
-                Task::add_task(&mut tasks, name, description);
+                let task = Task::find_task(&name.trim().to_string(), &mut tasks);
+                match task  {
+                    Some(task) => println!("\nTarea {} ya existe\n", task.name),    
+                    None => {let mut description = String::new();
+                        println!("Ingrese la descripcion de la Tarea: ");
+                        io::stdin().read_line(&mut description).unwrap();
+
+                        Task::add_task(&mut tasks, name, description);
+                    },
+                }
             },
             "3" => {
                 let mut name = String::new();
