@@ -18,7 +18,6 @@ impl Operation {
 
                 Ok(num1 / num2)
             },
-            _ => Err("Error".to_string()),
         }
    }
 
