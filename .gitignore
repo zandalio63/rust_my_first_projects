@@ -1,1 +1,29 @@
 /target
+# Ignorar dependencias descargadas por Cargo
+/target/
+
+# Archivos de configuración específicos del editor (ej. Visual Studio Code)
+.vscode/
+
+# Archivos de configuración de Rust
+Cargo.lock
+
+# Archivos de configuración del compilador de Rust
+*.rs.bk
+
+# Ignorar archivos generados por el compilador de Rust
+*.dSYM/
+*.o
+*.a
+
+# Si tienes algún directorio temporal para pruebas
+/tmp/
+
+# Archivos de compilación generados
+**/*.rs.bk
+
+# Archivos generados por el IDE
+.idea/
+
+# Archivos de configuración específicos de Cargo
+/cargo.lock
