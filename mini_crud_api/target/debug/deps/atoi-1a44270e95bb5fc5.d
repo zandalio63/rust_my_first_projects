@@ -1,0 +1,5 @@
+/root/Rust/Projects/mini_crud_api/target/debug/deps/atoi-1a44270e95bb5fc5.d: /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atoi-2.0.0/src/lib.rs
+
+/root/Rust/Projects/mini_crud_api/target/debug/deps/libatoi-1a44270e95bb5fc5.rmeta: /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atoi-2.0.0/src/lib.rs
+
+/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/atoi-2.0.0/src/lib.rs:

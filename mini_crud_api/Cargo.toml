@@ -1,0 +1,28 @@
+[package]
+name = "mini_crud_api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Web framework
+axum = "0.7"
+
+# Servidor HTTP
+tokio = { version = "1", features = ["full"] }
+
+# ORM / conexion a SQLite
+sqlx = { version = "0.7", features = ["runtime-tokio", "sqlite", "macros"] }
+
+# Para serializar / deserializar JSON
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Loggin
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+
+# Manejo de variables de entorno
+dotenvy = "0.15"
+
+# Errores mas elegantes
+thiserror = "1.0" 
