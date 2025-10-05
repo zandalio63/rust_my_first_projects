@@ -27,3 +27,6 @@ Cargo.lock
 
 # Archivos de configuración específicos de Cargo
 /cargo.lock
+
+# Variables de entorno
+.env
